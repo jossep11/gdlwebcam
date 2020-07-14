@@ -124,10 +124,34 @@ body{
   }
 }
 
-/**header**/
+
+.seccion{
+  padding: 3rem 0;
+}
+
+.seccion p{
+  font-size: 1.2em;
+  text-align: left;
+}
+
 h2{
   font-family: 'Oswald', sans-serif;
+  font-size: 2.4em;
+  text-transform: uppercase;
+  text-align: center;
 }
+
+h2::after{
+content: '';
+background-image: url(../img/separador.png);
+display: block;
+height: 30px;
+width: 100px;
+margin:0 auto;
+
+}
+
+/**header**/
 
 div.hero{
   background-image: url(../img/encabezado.jpg);
@@ -227,26 +251,36 @@ div.barra{
   padding: .5rem;  
 }
 
+
+@media only screen and (min-width: 768px){
+div.barra{
+  padding:1rem;
+}
+
+}
+
 div.logo {
   width:80%
 }
 
 div.logo img{
   width: 100%;
+  float: left;
 }
 
 
 @media only screen and (min-width:768px){
   div.logo {
     width:33%;
-    float: left;
+    
   }
 }
 
 /**Navegacion**/
 
 nav.navegacion-principal{
-  display:none;
+display:none;
+
 }
 
 nav.navegacion-principal a{
@@ -256,10 +290,16 @@ nav.navegacion-principal a{
   text-transform: uppercase;
   text-decoration: none;
   transition: all .3s ease;
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  
 }
 
 nav.navegacion-principal a:hover{
   background-color: #fe4918;
+  padding: .5rem;
 }
 
 nav.navegacion-principal a:last-child{
@@ -271,7 +311,28 @@ nav.navegacion-principal a:last-child:hover{
 color: #ffffff;
 }
 
-@media only screen and (min-width:768px){
+@media only screen and (min-width: 768px){
+  nav.navegacion-principal{
+    width: 67%;
+    float: right;
+    text-align: right;
+    display: block;
+    
+  }
+
+  nav.navegacion-principal a{
+    font-size: 1em;
+    padding: 5px;
+    width: auto;
+
+    display: inline;
+    margin: 0;
+    text-align: center;
+  }
+
+}
+
+@media only screen and (min-width: 992px){
 nav.navegacion-principal{
   width: 67%;
   float: right;
@@ -284,10 +345,34 @@ nav.navegacion-principal a{
   line-height: 60px;
   padding: 10px 10px;
 }
-
-
 }
 
+/**Menu Movil**/
+
+div.menu-movil{
+width: 60px;
+display: block;
+float: right;
+text-align: right;
+margin-top: 12px;
+}
+
+div.menu-movil:hover{
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px){
+ div.menu-movil{
+   display:none;
+ } 
+}
+
+div.menu-movil span{
+  height: 8px;
+  margin-bottom: 6px;
+  background-color: white;
+  display: block;
+}
 
 /* ==========================================================================
    Helper classes
